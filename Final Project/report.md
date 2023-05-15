@@ -2,7 +2,7 @@
 
 ![Stock](stock_photo.jpg)
 
-Link to youtube video - 
+Link to youtube video - https://www.youtube.com/watch?v=2i5jqzMqr5c
 
 Link to PPT - https://1drv.ms/p/s!Atx5QosFxCRboU28bL8xwhldAgsl
 
