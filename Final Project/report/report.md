@@ -47,7 +47,7 @@ Handling Missing Values: If there were any missing values in the dataset, they w
 <br>
 For our project, we are predicting the price of column "Close". To gain insights into the distribution of the 'Close' prices in the Amazon stock data, a histogram was created to visualize the frequency distribution of the data points.
 
-**PATH (Final Project/report/Distribution Plot.png)**
+(Distribution Plot.png)
 
 Histogram Analysis: <br>
 The histogram revealed a left-skewed distribution of the 'Close' prices. A left-skewed distribution, also known as a negatively skewed or left-tailed distribution, indicates that the tail of the distribution extends towards the lower values.<br>
