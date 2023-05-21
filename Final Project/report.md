@@ -32,7 +32,7 @@ The dataset includes the following fields:
 
 <br><br>
 
-### Data Preprocessing
+### Data 
 
 **Data Retrieval**
 <br>
@@ -41,6 +41,27 @@ Use the Yahoo Finance API to fetch the desired stock market data based on user i
 **Data Cleaning**
 <br>
 We Checked for missing values, outliers, or any inconsistencies in the retrieved data. But it turns out that the data was clean and there was no missing potential value.
+
+**Data Visualization**
+<br>
+Visualizing the time series data through candle stick chart and line plots in order to understand certain trends and pattern.
+![Line Plot](line_plot.PNG)
+
+**Descriptive statistics**
+<br>
+Calculate summary statistics such as mean, median, standard deviation, minimum, and maximum values to gain insights into the central tendencies, variability, and range of the stock market data.
+![Statistics](stats.PNG)
+
+**Distribution Analysis**
+<br>
+Analyze the distribution of the Close column in order to understand the characteristic of the data. As you can see in the image below it is left-skewed.
+![Distribution of Data](Distribution_close.PNG)
+
+**Outlier Detection**
+<br>
+ Outliers can significantly impact the analysis and forecasting. So in image below its seems that we do have certain outliers but those values cant be considered as outliers because they may be extreme values on peak selling or buying day.
+![Outlier of Data](outlier_detection.PNG)
+
 
 **Feature Selection**
 <br>
