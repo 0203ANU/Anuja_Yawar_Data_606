@@ -28,7 +28,7 @@ The dataset includes the following fields:
 - Close :- Closing price of the stock<br>
 - Volume :- Total number of the shares traded on that particular day<br>
 <br>
-### Data Preprocessing Data Cleaning <br> 
+###Data Preprocessing Data Cleaning <br> 
 **Data Retrieval**
 <br>
 Use the Yahoo Finance API to fetch the desired stock market data based on user input, such as the start date, end date, and ticker symbol.
@@ -47,8 +47,7 @@ Handling Missing Values: If there were any missing values in the dataset, they w
 <br>
 For our project, we are predicting the price of column "Close". To gain insights into the distribution of the 'Close' prices in the Amazon stock data, a histogram was created to visualize the frequency distribution of the data points.
 
-(Final Project/report/Distribution Plot.png)
-
+**PATH (Final Project/report/Distribution Plot.png)**
 
 Histogram Analysis: <br>
 The histogram revealed a left-skewed distribution of the 'Close' prices. A left-skewed distribution, also known as a negatively skewed or left-tailed distribution, indicates that the tail of the distribution extends towards the lower values.<br>
