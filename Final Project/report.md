@@ -8,13 +8,11 @@ Link to PPT - https://1drv.ms/p/s!Atx5QosFxCRboU28bL8xwhldAgsl
 
 ### Abstract 
 
-In this project, we have developed an application for stock market prediction that utilizes machine learning models such as ARIMA, LSTM, and Prophet. These models enable accurate forecasting of stock price movements. 
-To ensure the project's reliability and incorporate the latest market information, we have utilized data from the Yahoo Finance API and StockNews API. Ultimately, we have created a web application using Streamlit that allows users to forecast the stock price of any given stock.<br><br>
+In this project, we have developed an application for stock market prediction that utilizes machine learning models such as ARIMA, LSTM, and Prophet. These models enable accurate forecasting of stock price movements. To ensure the project's reliability and incorporate the latest market information, we have utilized data from the Yahoo Finance API and StockNews API. Ultimately, we have created a web application using Streamlit that allows users to forecast the stock price of any given stock.<br><br>
 
 ### Introduction 
 
-We aim to create a robust machine learning model capable of effectively forecasting future stock price movements using historical data and relevant variables. The model will be designed to handle the intricate and unpredictable nature of the stock market, providing dependable predictions for various stocks and indices. 
-The objective is to assist investors and financial institutions in making well-informed decisions, minimizing risks, and optimizing returns in the stock market.
+We aim to create a robust machine learning model capable of effectively forecasting future stock price movements using historical data and relevant variables. The model will be designed to handle the intricate and unpredictable nature of the stock market, providing dependable predictions for various stocks and indices. The objective is to assist investors and financial institutions in making well-informed decisions, minimizing risks, and optimizing returns in the stock market.
 <br><br>
 
 ### Data 
@@ -31,20 +29,36 @@ The dataset includes the following fields:
 - Volume :- Total number of the shares traded on that particular day<br>
 
 <br><br>
-
-### Data Preprocessing
-
+### Data Preprocessing Data Cleaning**
 **Data Retrieval**
 <br>
 Use the Yahoo Finance API to fetch the desired stock market data based on user input, such as the start date, end date, and ticker symbol.
+Data Loading: The stock data was loaded into a pandas DataFrame using the read_csv function.
 
-**Data Cleaning**
-<br>
-We Checked for missing values, outliers, or any inconsistencies in the retrieved data. But it turns out that the data was clean and there was no missing potential value.
+Before conducting the analysis on the Amazon stock data, several data preprocessing steps were performed to ensure the data is in the appropriate format for analysis. The following steps were taken:
+Column Data Types: The data types of the columns were carefully reviewed and adjusted as needed. The following changes were made:
 
-**Feature Selection**
+Date Column: The 'Date' column, initially stored as a string, was converted to the datetime data type using the to_datetime function in pandas. This allows for easier manipulation and plotting of the temporal data.
+
+Other Columns: If there were other columns with incorrect data types, similar steps would be taken to convert them to the appropriate data types. For example, numerical columns like 'Volume' or 'Price' would be converted to float or integer data types if necessary.
+
+Indexing: To facilitate time-based analysis, the 'Date' column was set as the DataFrame index using the set_index function. This enables easy access and slicing of data based on specific dates.
+
+Handling Missing Values: If there were any missing values in the dataset, they were addressed appropriately. In this case, there was no missing values ensuring that only complete and valid data was used for the analysis.
 <br>
-Identify the relevant features for our analysis and model. Consider factors such as stock price, trading volume, open, high, and low.
+For our project, we are predicting the price of column "Close". To gain insights into the distribution of the 'Close' prices in the Amazon stock data, a histogram was created to visualize the frequency distribution of the data points.
+
+
+
+
+Histogram Analysis: <br>
+The histogram revealed a left-skewed distribution of the 'Close' prices. A left-skewed distribution, also known as a negatively skewed or left-tailed distribution, indicates that the tail of the distribution extends towards the lower values.<br>
+The left-skewed histogram suggests that lower 'Close' prices occur more frequently than higher prices. This skewness can be attributed to various factors, such as market dynamics, investor sentiment, or specific events impacting the stock price.
+The left-skewed distribution implies that there might be some outliers on the higher end of the 'Close' prices, resulting in a longer left tail.
+<br>
+Implications
+The left-skewed distribution of the 'Close' prices in the Amazon stock data highlights the importance of considering the lower range of prices in the analysis. It suggests that the majority of 'Close' prices tend to be concentrated towards the lower end, with fewer occurrences of higher prices.<br>
+Understanding the distribution and skewness of the 'Close' prices can assist in making informed investment decisions and assessing the risk associated with trading Amazon stock. It provides a basis for identifying potential trends, anomalies, or patterns in the stock's price movements.
 
 ### Algorithm 
 **ARIMA**
