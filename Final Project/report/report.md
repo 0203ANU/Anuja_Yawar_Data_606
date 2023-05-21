@@ -27,9 +27,8 @@ The dataset includes the following fields:
 - Low :- The Lowest price of the stock on following day<br>
 - Close :- Closing price of the stock<br>
 - Volume :- Total number of the shares traded on that particular day<br>
-
-<br><br>
-### Data Preprocessing Data Cleaning**
+<br>
+### Data Preprocessing Data Cleaning
 **Data Retrieval**
 <br>
 Use the Yahoo Finance API to fetch the desired stock market data based on user input, such as the start date, end date, and ticker symbol.
@@ -48,7 +47,7 @@ Handling Missing Values: If there were any missing values in the dataset, they w
 <br>
 For our project, we are predicting the price of column "Close". To gain insights into the distribution of the 'Close' prices in the Amazon stock data, a histogram was created to visualize the frequency distribution of the data points.
 
-
+[Distribution Chart]('Final Project/report/Distribution Plot.png')
 
 
 Histogram Analysis: <br>
