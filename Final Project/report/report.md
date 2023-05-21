@@ -27,53 +27,58 @@ The dataset includes the following fields:
 - Low :- The Lowest price of the stock on following day<br>
 - Close :- Closing price of the stock<br>
 - Volume :- Total number of the shares traded on that particular day<br>
-<br>
-###Data Preprocessing Data Cleaning <br> 
+
+
+### Data Preprocessing Data Cleaning
+
 **Data Retrieval**
-<br>
+
 Use the Yahoo Finance API to fetch the desired stock market data based on user input, such as the start date, end date, and ticker symbol.
-Data Loading: The stock data was loaded into a pandas DataFrame using the read_csv function.
+- Data Loading: The stock data was loaded into a pandas DataFrame using the read_csv function.
 
 Before conducting the analysis on the Amazon stock data, several data preprocessing steps were performed to ensure the data is in the appropriate format for analysis. The following steps were taken:
-Column Data Types: The data types of the columns were carefully reviewed and adjusted as needed. The following changes were made:
+- Column Data Types: The data types of the columns were carefully reviewed and adjusted as needed. The following changes were made:
+- Date Column: The 'Date' column, initially stored as a string, was converted to the datetime data type using the to_datetime function in pandas. This allows for easier manipulation and plotting of the temporal data.
+- Other Columns: If there were other columns with incorrect data types, similar steps would be taken to convert them to the appropriate data types. For example, numerical columns like 'Volume' or 'Price' would be converted to float or integer data types if necessary.
+- Indexing: To facilitate time-based analysis, the 'Date' column was set as the DataFrame index using the set_index function. This enables easy access and slicing of data based on specific dates.
+- Handling Missing Values: If there were any missing values in the dataset, they were addressed appropriately. In this case, there was no missing values ensuring that only complete and valid data was used for the analysis.
 
-Date Column: The 'Date' column, initially stored as a string, was converted to the datetime data type using the to_datetime function in pandas. This allows for easier manipulation and plotting of the temporal data.
-
-Other Columns: If there were other columns with incorrect data types, similar steps would be taken to convert them to the appropriate data types. For example, numerical columns like 'Volume' or 'Price' would be converted to float or integer data types if necessary.
-
-Indexing: To facilitate time-based analysis, the 'Date' column was set as the DataFrame index using the set_index function. This enables easy access and slicing of data based on specific dates.
-
-Handling Missing Values: If there were any missing values in the dataset, they were addressed appropriately. In this case, there was no missing values ensuring that only complete and valid data was used for the analysis.
-<br>
 For our project, we are predicting the price of column "Close". To gain insights into the distribution of the 'Close' prices in the Amazon stock data, a histogram was created to visualize the frequency distribution of the data points.
 
 **Distribution Plot**
 Add 'Distribution Plot' here
 
-Histogram Analysis: <br>
-The histogram revealed a left-skewed distribution of the 'Close' prices. A left-skewed distribution, also known as a negatively skewed or left-tailed distribution, indicates that the tail of the distribution extends towards the lower values.<br>
-The left-skewed histogram suggests that lower 'Close' prices occur more frequently than higher prices. This skewness can be attributed to various factors, such as market dynamics, investor sentiment, or specific events impacting the stock price.
-The left-skewed distribution implies that there might be some outliers on the higher end of the 'Close' prices, resulting in a longer left tail.
-<br>
-Implications <br>
-The left-skewed distribution of the 'Close' prices in the Amazon stock data highlights the importance of considering the lower range of prices in the analysis. It suggests that the majority of 'Close' prices tend to be concentrated towards the lower end, with fewer occurrences of higher prices.<br>
-Understanding the distribution and skewness of the 'Close' prices can assist in making informed investment decisions and assessing the risk associated with trading Amazon stock. It provides a basis for identifying potential trends, anomalies, or patterns in the stock's price movements.
-<br>
+Histogram Analysis: 
+- The histogram revealed a left-skewed distribution of the 'Close' prices. A left-skewed distribution, also known as a negatively skewed or left-tailed distribution, indicates that the tail of the distribution extends towards the lower values.
+- The left-skewed histogram suggests that lower 'Close' prices occur more frequently than higher prices. This skewness can be attributed to various factors, such as market dynamics, investor sentiment, or specific events impacting the stock price.
+- The left-skewed distribution implies that there might be some outliers on the higher end of the 'Close' prices, resulting in a longer left tail.
+
+
+Implications 
+- The left-skewed distribution of the 'Close' prices in the Amazon stock data highlights the importance of considering the lower range of prices in the analysis. It suggests that the majority of 'Close' prices tend to be concentrated towards the lower end, with fewer occurrences of higher prices.
+- Understanding the distribution and skewness of the 'Close' prices can assist in making informed investment decisions and assessing the risk associated with trading Amazon stock. It provides a basis for identifying potential trends, anomalies, or patterns in the stock's price movements.
+
 Box Plot Analysis <br>
 To gain additional insights into the distribution and variability of the data, a box plot was created for each column in the Amazon stock dataset.
 
-Add 'BOX PLOT' here
-Box plot analysis: <br>
+Add 'BOX PLOT' here <br>
+
+Box plot analysis: 
+
 The presence of numerous outliers in the all columns suggests the occurrence of significant price gaps or sudden changes in the prices of Amazon stock. These outliers may indicate instances where the prices deviate significantly from the expected or typical range.
-<br><br>
-Historical Trend:<br>
+
+
+Historical Trend:
+
 The historical trend chart displays the historical prices of Amazon stock over time. It typically consists of a line graph with the x-axis representing the time period (days) and the y-axis representing the stock's price.
 
 ADD historical trend graph
 
-Moving Average Analysis <br>
-In addition to the box plot analysis, a moving average graph was constructed to examine trends and identify potential trading signals in the Amazon stock data. Three moving averages with different time periods were used: 10 days, 50 days, and 200 days. <br><br>
-Graph Description
+Moving Average Analysis
+
+In addition to the box plot analysis, a moving average graph was constructed to examine trends and identify potential trading signals in the Amazon stock data. Three moving averages with different time periods were used: 10 days, 50 days, and 200 days. 
+
+
 The moving average graph presents the rolling average of the closing prices over the specified time periods. Each line represents a different moving average:
 - The 10-day moving average line shows the average closing price over the most recent 10 trading days.
 - The 50-day moving average line represents the average closing price over the past 50 trading days.
