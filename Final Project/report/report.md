@@ -47,27 +47,77 @@ Handling Missing Values: If there were any missing values in the dataset, they w
 <br>
 For our project, we are predicting the price of column "Close". To gain insights into the distribution of the 'Close' prices in the Amazon stock data, a histogram was created to visualize the frequency distribution of the data points.
 
-('Distribution Plot.png')
+**Distribution Plot**
+Add 'Distribution Plot' here
 
 Histogram Analysis: <br>
 The histogram revealed a left-skewed distribution of the 'Close' prices. A left-skewed distribution, also known as a negatively skewed or left-tailed distribution, indicates that the tail of the distribution extends towards the lower values.<br>
 The left-skewed histogram suggests that lower 'Close' prices occur more frequently than higher prices. This skewness can be attributed to various factors, such as market dynamics, investor sentiment, or specific events impacting the stock price.
 The left-skewed distribution implies that there might be some outliers on the higher end of the 'Close' prices, resulting in a longer left tail.
 <br>
-Implications
+Implications <br>
 The left-skewed distribution of the 'Close' prices in the Amazon stock data highlights the importance of considering the lower range of prices in the analysis. It suggests that the majority of 'Close' prices tend to be concentrated towards the lower end, with fewer occurrences of higher prices.<br>
 Understanding the distribution and skewness of the 'Close' prices can assist in making informed investment decisions and assessing the risk associated with trading Amazon stock. It provides a basis for identifying potential trends, anomalies, or patterns in the stock's price movements.
+<br>
+Box Plot Analysis <br>
+To gain additional insights into the distribution and variability of the data, a box plot was created for each column in the Amazon stock dataset.
 
-### Algorithm 
+Add 'BOX PLOT' here
+Box plot analysis: <br>
+The presence of numerous outliers in the all columns suggests the occurrence of significant price gaps or sudden changes in the prices of Amazon stock. These outliers may indicate instances where the prices deviate significantly from the expected or typical range.
+<br><br>
+Historical Trend:<br>
+The historical trend chart displays the historical prices of Amazon stock over time. It typically consists of a line graph with the x-axis representing the time period (days) and the y-axis representing the stock's price.
+
+ADD historical trend graph
+
+Moving Average Analysis <br>
+In addition to the box plot analysis, a moving average graph was constructed to examine trends and identify potential trading signals in the Amazon stock data. Three moving averages with different time periods were used: 10 days, 50 days, and 200 days. <br><br>
+Graph Description
+The moving average graph presents the rolling average of the closing prices over the specified time periods. Each line represents a different moving average:
+- The 10-day moving average line shows the average closing price over the most recent 10 trading days.
+- The 50-day moving average line represents the average closing price over the past 50 trading days.
+- The 200-day moving average line reflects the average closing price over the previous 200 trading days.
+
+ADD Moving Average Graph here 
+<br><br>
+Impliations:
+- COVID-19 Pandemic: The COVID-19 pandemic, which began in early 2020, had a profound impact on global markets, including the stock market. On the historical trend chart, the effects of the pandemic may be visible as a sharp decline in stock prices during the initial outbreak, followed by a subsequent recovery and potential acceleration in the stock's upward trajectory.
+<br>
+- Donald Trump's Presidency: During Donald Trump's presidency, various policy decisions, economic initiatives, and trade tensions influenced financial markets. The historical trend chart may indicate specific periods of volatility or stability in Amazon stock prices during this time, reflecting market reactions to key events and policies associated with the Trump administration.
+
+### Algorithm  
+<br><br>
+**Summary of Pre-Model Fitting Steps:**
+- Data Stationarity Check: The stationarity of the data was assessed using two approaches: the Dickey-Fuller test and calculating the rolling mean. The results indicated that the data was not stationary.
+- 
+ADD image
+
+- Log-Normal Transformation: In an attempt to achieve stationarity, a log-normal transformation was applied to the data. However, this transformation did not yield the desired result.
+
+ADD Image
+
+- Order Differencing: To address the non-stationarity, order differencing was performed on the data. By taking the difference between consecutive observations, the data became stationary.
+
+ADD Image
+
 **ARIMA**
 <br>
 ARIMA stands for Autoregressive Integrated Moving Average. 
 It is a time series forecasting model that combines autoregression (AR), differencing (I), and moving average (MA) components to make predictions about future values in a time series.
-To implement ARIMA, you need to specify three parameters: p, d, and q. These represent the order of the AR, I, and MA components, respectively. The p parameter specifies the number of lags to include in the AR component, while the q parameter specifies the number of error terms to include in the MA component. The d parameter specifies the number of times the time series needs to be differenced to achieve stationarity
+To implement ARIMA, you need to specify three parameters: p, d, and q. These represent the order of the AR, I, and MA components, respectively. The p parameter specifies the number of lags to include in the AR component, while the q parameter specifies the number of error terms to include in the MA component. The d parameter specifies the number of times the time series needs to be differenced to achieve stationarity<br>
+ACF and PACF Analysis: Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) plots were generated to determine the appropriate values for the autoregressive (AR) and moving average (MA) parameters (p and q) in the time series model.
+<br>
+Model Plotting: Based on the identified values of the order of differencing (d), the AR parameter (p), and the MA parameter (q), a graph was plotted to visualize the time series model.
+
+ADD the prediction chart
+
+ADD the root mean square value
 <br>
 **LSTM**
 <br>
 LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN) architecture that is widely used in sequence prediction tasks, such as time series forecasting. It addresses the limitations of traditional RNNs by introducing a memory cell and three gating mechanisms: the input gate, forget gate, and output gate.
+ADD root mean square and train test graph 
 <br>
 **Phrophet**
 <br>
