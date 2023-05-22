@@ -46,7 +46,7 @@ Before conducting the analysis on the Amazon stock data, several data preprocess
 For our project, we are predicting the price of column "Close". To gain insights into the distribution of the 'Close' prices in the Amazon stock data, a histogram was created to visualize the frequency distribution of the data points.
 
 **Distribution Plot**
-Add 'Distribution Plot' here
+![Distribution Plot](Distribution Plot.png)
 
 Histogram Analysis: 
 - The histogram revealed a left-skewed distribution of the 'Close' prices. A left-skewed distribution, also known as a negatively skewed or left-tailed distribution, indicates that the tail of the distribution extends towards the lower values.
@@ -61,7 +61,7 @@ Implications
 Box Plot Analysis <br>
 To gain additional insights into the distribution and variability of the data, a box plot was created for each column in the Amazon stock dataset.
 
-Add 'BOX PLOT' here <br>
+![Box Plot](Box Plot.png) <br>
 
 Box plot analysis: 
 
@@ -84,7 +84,7 @@ The moving average graph presents the rolling average of the closing prices over
 - The 50-day moving average line represents the average closing price over the past 50 trading days.
 - The 200-day moving average line reflects the average closing price over the previous 200 trading days.
 
-ADD Moving Average Graph here 
+![Moving Average Plot](Moving average trend.png)
 <br><br>
 Impliations:
 - COVID-19 Pandemic: The COVID-19 pandemic, which began in early 2020, had a profound impact on global markets, including the stock market. On the historical trend chart, the effects of the pandemic may be visible as a sharp decline in stock prices during the initial outbreak, followed by a subsequent recovery and potential acceleration in the stock's upward trajectory.
@@ -96,7 +96,7 @@ Impliations:
 **Summary of Pre-Model Fitting Steps:**
 - Data Stationarity Check: The stationarity of the data was assessed using two approaches: the Dickey-Fuller test and calculating the rolling mean. The results indicated that the data was not stationary.
 - 
-ADD image
+![Log Close Plot](Log Close.png)
 
 - Log-Normal Transformation: In an attempt to achieve stationarity, a log-normal transformation was applied to the data. However, this transformation did not yield the desired result.
 
