@@ -70,19 +70,19 @@ The presence of numerous outliers in the all columns suggests the occurrence of 
 
 Historical Trend:
 
-The historical trend chart displays the historical prices of Amazon stock over time. It typically consists of a line graph with the x-axis representing the time period (days) and the y-axis representing the stock's price.
+The historical trend chart displays the historical prices of Amazon stock over time. It consists of a line graph with the x-axis representing the time period (days) and the y-axis representing the stock's price.
 
-ADD historical trend graph
+ADD 'stock trend 1997...'
 
 Moving Average Analysis
 
-In addition to the box plot analysis, a moving average graph was constructed to examine trends and identify potential trading signals in the Amazon stock data. Three moving averages with different time periods were used: 10 days, 50 days, and 200 days. 
-
+In addition to the box plot analysis, a moving average graph was constructed to examine trends and identify potential trading signals in the Amazon stock data. Three moving averages with different time periods were used: 10 days, 50 days, and 200 days.
 
 The moving average graph presents the rolling average of the closing prices over the specified time periods. Each line represents a different moving average:
 - The 10-day moving average line shows the average closing price over the most recent 10 trading days.
 - The 50-day moving average line represents the average closing price over the past 50 trading days.
 - The 200-day moving average line reflects the average closing price over the previous 200 trading days.
+
 
 ![Moving Average Plot](Moving average trend.png)
 <br><br>
@@ -95,16 +95,20 @@ Impliations:
 <br><br>
 **Summary of Pre-Model Fitting Steps:**
 - Data Stationarity Check: The stationarity of the data was assessed using two approaches: the Dickey-Fuller test and calculating the rolling mean. The results indicated that the data was not stationary.
-- 
-![Log Close Plot](Log Close.png)
+1. Checking by rolling mean stastitics
+![mean_std_constant](mean_std_exponential.png)
+
+2. By Dickey Fuller Test
+![Dickey_Fuller](Dickey Fuller.png)
+
 
 - Log-Normal Transformation: In an attempt to achieve stationarity, a log-normal transformation was applied to the data. However, this transformation did not yield the desired result.
 
-ADD Image
+![Log Close Plot](Log Close.png)
 
 - Order Differencing: To address the non-stationarity, order differencing was performed on the data. By taking the difference between consecutive observations, the data became stationary.
 
-ADD Image
+![mean_std_constant](mean_std_constant.png)
 
 **ARIMA**
 <br>
@@ -112,17 +116,24 @@ ARIMA stands for Autoregressive Integrated Moving Average.
 It is a time series forecasting model that combines autoregression (AR), differencing (I), and moving average (MA) components to make predictions about future values in a time series.
 To implement ARIMA, you need to specify three parameters: p, d, and q. These represent the order of the AR, I, and MA components, respectively. The p parameter specifies the number of lags to include in the AR component, while the q parameter specifies the number of error terms to include in the MA component. The d parameter specifies the number of times the time series needs to be differenced to achieve stationarity<br>
 ACF and PACF Analysis: Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) plots were generated to determine the appropriate values for the autoregressive (AR) and moving average (MA) parameters (p and q) in the time series model.
+
+![ACF_PACF](ACF_PACF.png)
+
 <br>
 Model Plotting: Based on the identified values of the order of differencing (d), the AR parameter (p), and the MA parameter (q), a graph was plotted to visualize the time series model.
 
-ADD the prediction chart
+![ARIMA_Prediction](ARIMA_Future_Actual_Fitted.png)
 
-ADD the root mean square value
+Root Mean Square Value: 0.0711
+Overall, the obtained RMSE value of 0.0711 indicates a satisfactory level of accuracy for the ARIMA model in predicting the Amazon stock prices.
 <br>
 **LSTM**
 <br>
 LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN) architecture that is widely used in sequence prediction tasks, such as time series forecasting. It addresses the limitations of traditional RNNs by introducing a memory cell and three gating mechanisms: the input gate, forget gate, and output gate.
-ADD root mean square and train test graph 
+
+![LSTM](LSTM_Train_val_test.png)
+
+RMSE of 2.083 means that, on average, the predicted values differ from the actual values by approximately 2.083 units.
 <br>
 **Phrophet**
 <br>
