@@ -46,7 +46,7 @@ Before conducting the analysis on the Amazon stock data, several data preprocess
 For our project, we are predicting the price of column "Close". To gain insights into the distribution of the 'Close' prices in the Amazon stock data, a histogram was created to visualize the frequency distribution of the data points.
 
 **Distribution Plot**
-![Distribution Plot](Distribution Plot.png)
+![Distribution Plot](Distribution_Plot.png)
 
 Histogram Analysis: 
 - The histogram revealed a left-skewed distribution of the 'Close' prices. A left-skewed distribution, also known as a negatively skewed or left-tailed distribution, indicates that the tail of the distribution extends towards the lower values.
@@ -60,7 +60,7 @@ Implications
 Box Plot Analysis <br>
 To gain additional insights into the distribution and variability of the data, a box plot was created for each column in the Amazon stock dataset.
 
-![Box Plot](Box Plot.png) <br>
+![Box Plot](Box_Plot.png) <br>
 
 Box plot analysis: 
 
@@ -71,7 +71,7 @@ Historical Trend:
 
 The historical trend chart displays the historical prices of Amazon stock over time. It consists of a line graph with the x-axis representing the time period (days) and the y-axis representing the stock's price.
 
-![historical_trend](Stock trend 1997-2023.png)
+![historical_trend](Stock_trend_1997_2023.png)
 
 Moving Average Analysis
 
@@ -83,7 +83,7 @@ The moving average graph presents the rolling average of the closing prices over
 - The 200-day moving average line reflects the average closing price over the previous 200 trading days.
 
 
-![Moving Average Plot](Moving average trend.png)
+![Moving Average Plot](Moving_average_trend.png)
 <br><br>
 Impliations:
 - COVID-19 Pandemic: The COVID-19 pandemic, which began in early 2020, had a profound impact on global markets, including the stock market. On the historical trend chart, the effects of the pandemic may be visible as a sharp decline in stock prices during the initial outbreak, followed by a subsequent recovery and potential acceleration in the stock's upward trajectory.
@@ -98,12 +98,12 @@ Impliations:
 ![mean_std_constant](mean_std_exponential.png)
 
 2. By Dickey Fuller Test
-![Dickey_Fuller](Dickey Fuller.png)
+![Dickey_Fuller](Dickey_Fuller.png)
 
 
 - Log-Normal Transformation: In an attempt to achieve stationarity, a log-normal transformation was applied to the data. However, this transformation did not yield the desired result.
 
-![Log Close Plot](Log Close.png)
+![Log Close Plot](Log_Close.png)
 
 - Order Differencing: To address the non-stationarity, order differencing was performed on the data. By taking the difference between consecutive observations, the data became stationary.
 
