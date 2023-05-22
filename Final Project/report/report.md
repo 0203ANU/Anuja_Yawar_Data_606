@@ -53,7 +53,6 @@ Histogram Analysis:
 - The left-skewed histogram suggests that lower 'Close' prices occur more frequently than higher prices. This skewness can be attributed to various factors, such as market dynamics, investor sentiment, or specific events impacting the stock price.
 - The left-skewed distribution implies that there might be some outliers on the higher end of the 'Close' prices, resulting in a longer left tail.
 
-
 Implications 
 - The left-skewed distribution of the 'Close' prices in the Amazon stock data highlights the importance of considering the lower range of prices in the analysis. It suggests that the majority of 'Close' prices tend to be concentrated towards the lower end, with fewer occurrences of higher prices.
 - Understanding the distribution and skewness of the 'Close' prices can assist in making informed investment decisions and assessing the risk associated with trading Amazon stock. It provides a basis for identifying potential trends, anomalies, or patterns in the stock's price movements.
@@ -72,7 +71,7 @@ Historical Trend:
 
 The historical trend chart displays the historical prices of Amazon stock over time. It consists of a line graph with the x-axis representing the time period (days) and the y-axis representing the stock's price.
 
-ADD 'stock trend 1997...'
+![historical_trend](Stock trend 1997-2023.png)
 
 Moving Average Analysis
 
